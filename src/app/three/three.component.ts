@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { appValues } from '../app.component';
 
 @Component({
   selector: 'app-three',
   templateUrl: './three.component.html',
-  styleUrls: ['./three.component.css']
+  styleUrls: ['./three.component.css'],
 })
 export class ThreeComponent implements OnInit {
+  @Input() appValues!: appValues;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

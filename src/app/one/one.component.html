@@ -1,1 +1,17 @@
-<p>one works!</p>
+<div stule="width:400px">
+  <div class="form-group text-center">
+    <input
+      type="text"
+      class="form-control mb-2"
+      placeholder="Add your question here"
+      #question
+    />
+    <button
+      class="btn btn-outline-info"
+      type="submit"
+      (click)="onAddQuestion(question)"
+    >
+      Add
+    </button>
+  </div>
+</div>

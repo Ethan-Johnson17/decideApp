@@ -1,1 +1,39 @@
-<p>two works!</p>
+<div style="width: 400px">
+  <div class="mb-4">
+    <small>Your question was:</small>
+    <h4>{{ appValues.question }}</h4>
+  </div>
+
+  <div *ngIf="appValues.mode">
+    <input
+      type="text"
+      class="form-control mb-2"
+      placeholder="add answer..."
+      #custom
+    />
+    <button class="btn btn-outline-secondary mb-2" (click)="addAnswer(custom)">
+      Add
+    </button>
+
+    <div>
+      <div
+        *ngFor="let custom of appValues.custom"
+        class="btn btn-outline-primary btn-small me-2 mb-2"
+      >
+        {{ custom }}
+      </div>
+    </div>
+    <hr />
+  </div>
+
+  <div class="form-group text-center mb-2" *ngIf="!appValues.mode">
+    <button class="btn btn-outline-info" (click)="changeMode()" type="button">
+      Add custom answer
+    </button>
+  </div>
+  <div class="form-group text-center mb-2">
+    <button class="btn btn-outline-info" (click)="getResults()" type="button">
+      Make a decision
+    </button>
+  </div>
+</div>

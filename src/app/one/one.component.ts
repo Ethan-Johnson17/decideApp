@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { appValues } from '../app.component';
+import { appValues, Errors } from '../app.component';
 
 @Component({
   selector: 'app-one',
@@ -8,8 +8,8 @@ import { appValues } from '../app.component';
 })
 export class OneComponent implements OnInit {
   @Input() appValues!: appValues;
-  @Output() next = new EventEmitter<any>();
-  @Output() hasErrors = new EventEmitter<any>();
+  @Output() next = new EventEmitter<appValues>();
+  @Output() hasErrors = new EventEmitter<Errors>();
 
   constructor() {}
 

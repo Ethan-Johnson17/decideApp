@@ -1,1 +1,21 @@
-<p>three works!</p>
+<div style="width: 400px">
+  <div class="mb-4">
+    <small>Your question was:</small>
+    <h4>{{ appValues.question }}</h4>
+  </div>
+  <div class="mb-4">
+    <small>Your answer is:</small>
+    <h4>{{ appValues.answer }}</h4>
+  </div>
+
+  <div class="form-group text-center mb-2">
+    <button class="btn btn-light" type="button" (click)="doItAgain()">
+      Don't like that answer!
+    </button>
+  </div>
+  <div class="form-group text-center mb-2">
+    <button class="btn btn-dark" type="button" (click)="onStartOver()">
+      Start over
+    </button>
+  </div>
+</div>
